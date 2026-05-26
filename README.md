@@ -2,7 +2,7 @@
 Package to make fancy roman images, also a wordplay on Nancy Roman ...
 
 ```
-conda create --name fancyroman python=3.13 -y
+conda create --name fancyroman python=3.14 -y
 conda activate fancyroman
 pip install roman_datamodels
 conda install jupyterlab -y
