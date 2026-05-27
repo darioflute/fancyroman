@@ -105,10 +105,10 @@ def main():
     
     app = QtWidgets.QApplication(sys.argv)
     app.setApplicationVersion(__version__)
-    screen_resolution = app.desktop().screenGeometry()
+    screen_resolution = app.primaryScreen().geometry()
     width = screen_resolution.width()
     aw = MainWindow()
-    aw.setGeometry(100, 100, width*0.9, width*0.45)
+    aw.setGeometry(100, 100, int(width*0.8), int(width*0.4))
     progname = 'Fancy Roman'
     aw.setWindowTitle("%s" % progname)
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
