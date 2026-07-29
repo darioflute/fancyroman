@@ -77,6 +77,9 @@ def unsaturate_psf(L2, stars, output=None):
     ra, dec = stars.ra.deg, stars.dec.deg
     x, y = wcs.backward_transform(ra, dec)
     idx = (x >= 17) & (x < 4088-17) & (y >= 17) & (y < 4088-17)    
+    if np.sum(idx) == 0:
+        print('No stars in this image')
+        exit
     x, y = x[idx], y[idx]
 
     # Central pixel of subimage and distance of star from central pixel in 1/10 of pixel
