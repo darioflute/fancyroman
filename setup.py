@@ -20,7 +20,7 @@ config = {
     'packages': ['fancyroman'],
     'scripts': ['bin/fancyroman'],
     'include_package_data':True,
-    'package_data':{'fifimon':['version.json','icons/*.png','copyright.txt']},
+    'package_data':{'fifimon':['data/*.h5','version.json','icons/*.png','copyright.txt']},
     'classifiers':[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: GPLv3+ License",
