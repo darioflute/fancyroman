@@ -100,7 +100,10 @@ class ImageCanvas(MplCanvas):
         yy = radec.dec.to_string(sep=':',precision=1)
         column = int(x + 0.5)
         row = int(y + 0.5)
-        dqvalue = self.dq[row, column]
+        try:
+            dqvalue = self.dq[row, column]
+        except:
+            dqvalue = 0
         format = '{:s} {:s} ({:04.0f},{:04.0f}) [{:032b}]'.format(xx,yy,x,y,dqvalue)
         return format
     
